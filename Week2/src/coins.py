@@ -18,8 +18,12 @@ def generate(size):
 def detect(no_of_coins):
 	pos = 0
 	# add your logic here
-	for i in range(0, no_of_coins-1):
-		pass
+	for i in range(0, no_of_coins - 1):
+		if (scale(i)) < scale(i + 1) or (scale(i)) > scale(i + 1):
+			if (scale(i)) < (scale(i + 1)):
+				pos = i + 1
+			else:
+				pos = i + 2
 	return pos
 	
 	

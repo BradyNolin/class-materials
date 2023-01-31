@@ -12,8 +12,8 @@
 \usepackage{algorithmic}
 
 \title{Songs}
-\author{amohan}
-\date{January 17th 2023}
+\author{bnolin}
+\date{January 18th 2023}
 
 \begin{document}
 \begin{itemize}
@@ -27,8 +27,15 @@
 \scalebox{1}{
 \begin{algorithm}[H]
 \begin{algorithmic}[1]
-% add your algorithm here
-% please note: this code may not compile without adding the algorithmic logic in here ...
+\STATE $temp \gets S[i]$
+\STATE $res \gets 1$
+\FOR{$i=1$ to $|S|$}
+\IF{$S[i] < temp$}
+\STATE $temp \gets S[i]$
+\STATE $res \gets i+1$
+\ENDIF
+\ENDFOR
+\STATE \textbf{return} res;
 
 \end{algorithmic}
 \label{alg:seq}

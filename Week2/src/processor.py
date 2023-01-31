@@ -1,15 +1,13 @@
 import time
-def compute():
+def compute2():
 	value_of_n = 50000
 	value_of_out = 0
 	for i in range(value_of_n):
-		for j in range(value_of_n):
-			if (i == j):
-				value_of_out += i
+		value_of_out += i
 	print(value_of_out)
 if __name__ == "__main__":
 	start = time.time()
-	compute()
+	compute2()
 	end = time.time()
 	# get the execution time
 	elapsed_time = end - start
