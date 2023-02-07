@@ -19,7 +19,7 @@ def detect(no_of_coins):
 	pos = 0
 	# add your logic here
 	for i in range(0, no_of_coins - 1):
-		if (scale(i)) < scale(i + 1) or (scale(i)) > scale(i + 1):
+		if (scale(i)) != scale(i + 1):
 			if (scale(i)) < (scale(i + 1)):
 				pos = i + 1
 			else:
@@ -32,9 +32,9 @@ if __name__ == "__main__":
 	size = 16 # number of coins is set here, can be any number in power of two's
 	generate(size)
 	print(coins)
-	pos = detect(size)
-	#print("position(starting at 1):", pos) 
-	#print("weight:",coins[pos-1])
+	pos = detect(0, size)
+	print("position(starting at 1):", pos) 
+	print("weight:",coins[pos-1])
 
 	#end = time.time()
 	#elapsed_time = (end - start)
